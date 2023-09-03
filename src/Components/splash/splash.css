@@ -1,0 +1,98 @@
+.splash-div {
+ width: 100%;
+ height: 100%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ margin: 0 auto;
+ background-size: cover;
+ background-repeat: no-repeat;
+}
+
+.videohome {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    animation-play-state: running;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.splash-txt-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 999;
+}
+
+.splash-div h1 {
+    font-family: 'Bagel Fat One', cursive;
+    font-weight:200;
+    color: rgb(242, 255, 226);
+    font-size: 10vw;
+    transform: all .25s linear;
+    padding: 0;
+    margin: 0;
+}
+
+.splash-li {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    font-size: 1.25vw;
+    align-items: start;
+    color: rgb(242, 255, 226);
+    line-height: 0;
+    list-style: none;
+}
+.hidden-span {
+    display: none;
+  }
+
+  .hidden-a {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .hidden-a:hover .hidden-span {
+    display: block;
+    position: fixed;
+    z-index: -1;
+    top: 5%;
+    left: auto;
+    transform: rotate(-8deg);
+  }
+
+  .hidden-div {
+    text-decoration: none;
+    color: inherit;
+    margin: 0;
+    padding: 0;
+  }
+
+  .hidden-div:hover .hidden-span {
+    display: block;
+    position: relative;
+    transform: rotate(-9deg);
+  }
+
+  .hidden-img {
+    width: 42vw;
+  }
+
+  @media only screen and (max-width: 480px) {
+    .splash-div h1 {
+        font-size: 4rem;
+    }
+    .splash-li {
+        font-size: .5rem;
+    }
+    .hidden-a:hover .hidden-span {
+        top: 25%;
+        left: 30%;
+      }
+  }
