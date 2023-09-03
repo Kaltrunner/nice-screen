@@ -1,9 +1,13 @@
+// import Footer from "../footer/Footer";
 import "./splash.css";
 
 function Splash() {
   return (
     <>
       <div className="splash-div">
+        {/* <div className="click-btn-div">
+          <button className="click-btn">theme</button>
+        </div> */}
         <div className="splash-txt-div">
           <h1>nice screen</h1>
           <div className="hidden-a">
@@ -21,6 +25,7 @@ function Splash() {
             </span>
           </div>
         </div>
+        {/* <Footer /> */}
       </div>
     </>
   );

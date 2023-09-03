@@ -4,9 +4,34 @@
  display: flex;
  justify-content: center;
  align-items: center;
+ flex-direction: column;
  margin: 0 auto;
  background-size: cover;
  background-repeat: no-repeat;
+}
+
+.click-btn-div {
+  z-index: 999;
+}
+
+.click-btn {
+  top: 0;
+  position: fixed;
+  font-weight: 900;
+  font-size: 1.25vw;
+  border: 1px solid rgb(242, 255, 226);
+  border-radius: 50rem;
+  padding: .5em;
+  background-color: transparent;
+  color: rgb(242, 255, 226);
+  margin-top: 2vw;
+  transition: all .5s ease-in-out;
+}
+
+.click-btn:hover {
+  cursor: pointer !important;
+  background-color: rgb(242, 255, 226);
+  color: #000;
 }
 
 .videohome {
