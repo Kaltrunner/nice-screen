@@ -64,13 +64,17 @@
     margin: 0;
 }
 
+/* .splash-ul {
+  width: 25%;
+} */
+
 .splash-li {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 900;
     font-size: 1.25vw;
     align-items: start;
     color: rgb(242, 255, 226);
-    line-height: 0;
+    line-height: 2;
     list-style: none;
 }
 .hidden-span {
@@ -81,6 +85,7 @@
     text-decoration: none;
     margin: 0;
     padding: 0;
+    width: 25%;
   }
 
   .hidden-a:hover .hidden-span {
@@ -107,6 +112,7 @@
 
   .hidden-img {
     width: 42vw;
+    min-width: 18rem;
   }
 
   @media only screen and (max-width: 480px) {
@@ -118,6 +124,6 @@
     }
     .hidden-a:hover .hidden-span {
         top: 25%;
-        left: 30%;
+        left: auto;
       }
   }

@@ -1,4 +1,3 @@
-// import Footer from "../footer/Footer";
 import "./splash.css";
 
 function Splash() {
@@ -12,8 +11,8 @@ function Splash() {
           <h1>nice screen</h1>
           <div className="hidden-a">
             <ul className="splash-ul">
-              <li className="splash-li">DESIGN - NYC</li>
               <li className="splash-li"></li>
+              <li className="splash-li">DESIGN - NYC</li>
               <li className="splash-li"></li>
             </ul>
             <span className="hidden-span">
@@ -25,7 +24,6 @@ function Splash() {
             </span>
           </div>
         </div>
-        {/* <Footer /> */}
       </div>
     </>
   );
