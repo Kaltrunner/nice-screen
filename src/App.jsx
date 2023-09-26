@@ -1,19 +1,41 @@
-import React from "react";
+import React, { useEffect } from "react";
 import AnimatedCursor from "react-animated-cursor";
 import Header from "./Components/splash/Splash";
 import "./App.css";
 
 function App() {
+  useEffect(() => {
+    const backgroundClasses = [
+      "bg-color1",
+      "bg-color2",
+      "bg-color3",
+      "bg-color4",
+      "bg-color5",
+    ];
+
+    const randomIndex = Math.floor(Math.random() * backgroundClasses.length);
+
+    const selectedClass = backgroundClasses[randomIndex];
+
+    document.body.classList.add(selectedClass);
+
+    return () => {
+      backgroundClasses.forEach((bgClass) => {
+        document.body.classList.remove(bgClass);
+      });
+    };
+  }, []);
+
   return (
     <>
       <AnimatedCursor
         id="mouse"
         innerSize={0}
         outerSize={700}
-        color="250,0,255"
+        color="245, 216, 245"
         outerAlpha={1}
         innerScale={0.5}
-        outerScale={0.5}
+        outerScale={0.8}
         trailingSpeed={25}
         hasBlendMode={true}
         filter={true}
@@ -35,7 +57,7 @@ function App() {
           ".link",
         ]}
       />
-      <div className="body">
+      <div id="body">
         <Header />
       </div>
     </>
