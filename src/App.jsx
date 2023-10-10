@@ -6,11 +6,11 @@ import "./App.css";
 function App() {
   useEffect(() => {
     const backgroundClasses = [
-      "bg-color1",
+      // "bg-color1",
       "bg-color2",
-      "bg-color3",
-      "bg-color4",
-      "bg-color5",
+      // "bg-color3",
+      // "bg-color4",
+      // "bg-color5",
     ];
 
     const randomIndex = Math.floor(Math.random() * backgroundClasses.length);
@@ -40,7 +40,7 @@ function App() {
         hasBlendMode={true}
         filter={true}
         outerStyle={{
-          mixBlendMode: "hard-light",
+          // mixBlendMode: "hard-light",
           filter: "blur(200px)",
         }}
         clickables={[
