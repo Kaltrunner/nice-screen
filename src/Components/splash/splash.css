@@ -18,6 +18,8 @@
 .center-circle {
   width: 42vw;
   height: 42vw;
+  min-width: 18rem;
+  min-height: 18rem;
   /* background: radial-gradient(circle, rgb(17, 199, 77) 0%, rgb(246, 56, 215) 100%); */
   border-radius: 500%;
   /* position: absolute; */
@@ -48,6 +50,11 @@
     margin: .5;
 }
 
+.splash-scroll-div {
+  height: auto;
+  overflow: hidden;
+}
+
 .design-div {
   margin: 0 1vw;
 }
@@ -61,6 +68,7 @@
     font-size: 3vw;
     padding: 0;
     margin-left: 1rem;
+    
 }
 
 .splash-li {

@@ -66,11 +66,38 @@
 // export default Splash;
 
 import React, { useEffect, useRef } from "react";
-import { TimelineMax, Power0 } from "gsap";
+import { TimelineMax, Power0, gsap } from "gsap";
 import "./splash.css";
 
 function Splash() {
   const centerCircleRef = useRef(null);
+
+  useEffect(() => {
+    const splash = document.querySelector(".splash-scroll-div");
+    const splashTitle = splash.querySelectorAll(".splash-scroll-div > h1");
+
+    const initHero = () => {
+      gsap.set(splashTitle, { y: "201%" });
+    };
+
+    const showHero = () => {
+      gsap.timeline({ defaults: { ease: "expo-out" } }).fromTo(
+        splashTitle,
+        {
+          opacity: 0,
+        },
+        {
+          duration: 1.25,
+          opacity: 1,
+          y: 0,
+          stagger: 0.055,
+        },
+        0
+      );
+    };
+    initHero();
+    showHero();
+  }, []);
 
   useEffect(() => {
     const centerCircle = centerCircleRef.current;
@@ -91,7 +118,10 @@ function Splash() {
 
     // Add gradient-changing animations to the timeline
     gradients.forEach((gradient) => {
-      tl.to(centerCircle, 9, { backgroundImage: gradient, ease: Power0.easeNone });
+      tl.to(centerCircle, 9, {
+        backgroundImage: gradient,
+        ease: Power0.easeNone,
+      });
     });
 
     // Start the animation
@@ -102,9 +132,12 @@ function Splash() {
     <>
       <div className="splash-div">
         <div className="splash-txt-div">
-          <h1 className="splash-header">NICE - SCREEN</h1>
+          <div className="splash-scroll-div">
+            <h1 className="splash-header">NICE - SCREEN</h1>
+          </div>
+
           <div className="design-div">
-            <div className="hidden-a">
+            {/* <div className="hidden-a">
               <ul className="splash-ul">
                 <li className="splash-li"></li>
                 <li className="splash-li">DESIGN - NYC</li>
@@ -117,7 +150,7 @@ function Splash() {
                   alt=""
                 />
               </span>
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="circle-container">
