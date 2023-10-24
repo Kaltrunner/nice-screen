@@ -31,17 +31,17 @@ function App() {
       <AnimatedCursor
         id="mouse"
         innerSize={0}
-        outerSize={200}
+        outerSize={225}
         color="245, 216, 245"
         outerAlpha={1}
         innerScale={0.5}
         outerScale={0.8}
-        trailingSpeed={8}
+        trailingSpeed={12}
         hasBlendMode={true}
         filter={true}
         outerStyle={{
-          // mixBlendMode: "hard-light",
-          filter: "blur(75px)",
+          mixBlendMode: "revert-layer",
+          filter: "blur(125px)",
         }}
         clickables={[
           "a",
