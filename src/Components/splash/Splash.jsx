@@ -75,25 +75,54 @@ function Splash() {
   useEffect(() => {
     const splash = document.querySelector(".splash-scroll-div");
     const splashTitle = splash.querySelectorAll(".splash-scroll-div > h1");
+    const splashCircle = centerCircleRef.current;
+    const footer = document.querySelectorAll(".footer-divs > p");
 
     const initHero = () => {
-      gsap.set(splashTitle, { y: "201%" });
+      gsap.set(splashTitle, { y: "-201%" });
+      gsap.set(splashCircle, { scale: 0, opacity: 0 });
+      gsap.set(footer, { y: "201%" });
     };
 
     const showHero = () => {
-      gsap.timeline({ defaults: { ease: "expo-out" } }).fromTo(
-        splashTitle,
-        {
-          opacity: 0,
-        },
-        {
-          duration: 1.25,
-          opacity: 1,
-          y: 0,
-          stagger: 0.055,
-        },
-        0
-      );
+      gsap
+        .timeline({ defaults: { ease: "expo-out" } })
+        .fromTo(
+          splashTitle,
+          {
+            opacity: 0,
+          },
+          {
+            duration: 1.5,
+            opacity: 1,
+            y: 0,
+            stagger: 0.015,
+          },
+          0
+        )
+        .to(
+          splashCircle,
+          {
+            duration: 1,
+            scale: 1,
+            opacity: 1,
+            ease: "expo-out",
+          },
+          0
+        )
+        .fromTo(
+          footer,
+          {
+            opacity: 0,
+          },
+          {
+            duration: 1.75,
+            opacity: 1,
+            y: 0,
+            stagger: 0.015,
+          },
+          0
+        );
     };
     initHero();
     showHero();
@@ -157,7 +186,16 @@ function Splash() {
           <div className="center-circle" ref={centerCircleRef}></div>
         </div>
         <div className="footer">
-          <div className="cordnates">• 40.6782° N, 73.9442° W</div>
+          <div className="footer-divs">
+            <p id="footer-link">Work</p>
+            <p className="cordnates">
+              See past and current
+              <br /> projects.
+            </p>
+          </div>
+          <div className="footer-divs">
+            <p className="cordnates">• 40.6782° N, 73.9442° W</p>
+          </div>
         </div>
       </div>
     </>
