@@ -3,13 +3,14 @@
  height: 100vh;
  display: flex;
  flex-direction: column;
+ justify-content: center;
  overflow: hidden;
  background-color: #151515;
 }
 
 .circle-container {
   width: 100vw;
-  height: 80vw;
+  height: 80%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -47,6 +48,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
     top: 0;
 }
 
@@ -149,23 +151,13 @@
 
   @media only screen and (max-width: 390px) {
   
-    /* .splash-div {
-      flex-wrap: wrap;
-      justify-content: center;
-     
-    }
     .splash-header {
-        font-size: 3rem;
-        transform: rotate(270deg);
+        font-size: 1.5rem;
     }
-    .design-div {
-     display: none;
+    #footer-link {
+      font-size: 3rem;
     }
-    .splash-li {
-        font-size: 1rem;
+    .footer {
+      font-size: .75rem;
     }
-    .hidden-a:hover .hidden-span {
-        top: 25%;
-        left: auto;
-      } */
   }
