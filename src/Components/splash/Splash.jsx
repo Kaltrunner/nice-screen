@@ -73,13 +73,15 @@ function Splash() {
   const centerCircleRef = useRef(null);
 
   useEffect(() => {
-    const splash = document.querySelector(".splash-scroll-div");
-    const splashTitle = splash.querySelectorAll(".splash-scroll-div > h1");
+    const splash = document.querySelector(".splash-header");
+    const splashTitle = splash.querySelectorAll(".h1-div > h1, h2");
+    const splashP = splash.querySelectorAll(".p-div > p");
     const splashCircle = centerCircleRef.current;
-    const footer = document.querySelectorAll(".footer-divs > p");
+    const footer = document.querySelectorAll(".footer > div");
 
     const initHero = () => {
       gsap.set(splashTitle, { y: "-201%" });
+      gsap.set(splashP, { y: "-601%" });
       gsap.set(splashCircle, { scale: 0, opacity: 0 });
       gsap.set(footer, { y: "201%" });
     };
@@ -100,10 +102,23 @@ function Splash() {
           },
           0
         )
+        .fromTo(
+          splashP,
+          {
+            opacity: 0,
+          },
+          {
+            duration: 1.5,
+            opacity: 1,
+            y: 0,
+            stagger: 0.015,
+          },
+          0
+        )
         .to(
           splashCircle,
           {
-            duration: 1,
+            duration: 1.5,
             scale: 1,
             opacity: 1,
             ease: "expo-out",
@@ -116,7 +131,7 @@ function Splash() {
             opacity: 0,
           },
           {
-            duration: 1.75,
+            duration: 1.5,
             opacity: 1,
             y: 0,
             stagger: 0.015,
@@ -129,7 +144,7 @@ function Splash() {
   }, []);
 
   useEffect(() => {
-    const centerCircle = centerCircleRef.current;
+    // const centerCircle = centerCircleRef.current;
 
     // Define the gradients you want to use
     const gradients = [
@@ -147,7 +162,7 @@ function Splash() {
 
     // Add gradient-changing animations to the timeline
     gradients.forEach((gradient) => {
-      tl.to(centerCircle, 9, {
+      tl.to(centerCircleRef.current, 9, {
         backgroundImage: gradient,
         ease: Power0.easeNone,
       });
@@ -161,12 +176,20 @@ function Splash() {
     <>
       <div className="splash-div">
         <div className="splash-txt-div">
-          <div className="splash-scroll-div">
-            <h1 className="splash-header">NICE - SCREEN</h1>
+          <div className="splash-header">
+            <div className="h1-div">
+              <h1 className="splash-header-h1">NICE–SCREEN</h1>
+            </div>
+            <div className="p-div">
+              <p className="splash-header-p">Product Design</p>
+            </div>
+            <div className="">
+              <h2 className="splash-header-h2">About</h2>
+            </div>
           </div>
 
-          <div className="design-div">
-            {/* <div className="hidden-a">
+          {/* <div className="design-div"> */}
+          {/* <div className="hidden-a">
               <ul className="splash-ul">
                 <li className="splash-li"></li>
                 <li className="splash-li">DESIGN - NYC</li>
@@ -180,21 +203,28 @@ function Splash() {
                 />
               </span>
             </div> */}
-          </div>
+          {/* </div> */}
         </div>
+
+        {/* Correctly apply the ripple effect to the "ripple-container" element */}
         <div className="circle-container">
           <div className="center-circle" ref={centerCircleRef}></div>
         </div>
+
         <div className="footer">
           <div className="footer-divs">
             <p id="footer-link">Work</p>
-            <p className="cordnates">
+
+            {/* <p className="cordnates">
               See past and current
               <br /> projects.
-            </p>
+            </p> */}
           </div>
           <div className="footer-divs">
-            <p className="cordnates">• 40.6782° N, 73.9442° W</p>
+            {/* <p className="exp" id="footer-link">Exp.</p> */}
+            <p className="cordnates exp">linkedin</p>
+            <p className="cordnates">joycettes@gmail.com</p>
+            {/* <p className="cordnates">• 40.6782° N, 73.9442° W</p> */}
           </div>
         </div>
       </div>
