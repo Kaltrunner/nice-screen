@@ -1,6 +1,8 @@
 // import React, { useEffect } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AnimatedCursor from "react-animated-cursor";
 import Header from "./Components/splash/Splash";
+import About from "./Components/about/About";
 import "./App.css";
 
 function App() {
@@ -58,7 +60,12 @@ function App() {
         ]}
       />
       <div id="body">
-        <Header />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Header />} />
+            <Route path="/about" element={<About />} />
+          </Routes>
+        </BrowserRouter>
       </div>
     </>
   );

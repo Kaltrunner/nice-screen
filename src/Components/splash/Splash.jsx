@@ -1,71 +1,5 @@
-// import React, { useEffect, useRef } from "react";
-// import Orb from "../Orb/Orb";
-// import "./splash.css";
-
-// function Splash() {
-//   const centerCircleRef = useRef(null);
-
-//   useEffect(() => {
-//     const backgroundClasses = [
-//       "bg-color1",
-//       "bg-color2",
-//       "bg-color3",
-//       "bg-color4",
-//       "bg-color5",
-//     ];
-
-//     const randomIndex = Math.floor(Math.random() * backgroundClasses.length);
-
-//     const selectedClass = backgroundClasses[randomIndex];
-
-//     if (centerCircleRef.current) {
-//       centerCircleRef.current.classList.add(selectedClass);
-//     }
-
-//     return () => {
-//       backgroundClasses.forEach((bgClass) => {
-//         if (centerCircleRef.current) {
-//           centerCircleRef.current.classList.remove(bgClass);
-//         }
-//       });
-//     };
-//   }, []);
-
-//   return (
-//     <>
-//       <div className="splash-div">
-//         <div className="center-circle" ref={centerCircleRef}></div>
-//         <div className="orb-container">
-//           <Orb />
-//         </div>
-//         s
-//         <div className="splash-txt-div">
-//           <h1 className="splash-header">NICE - SCREEN</h1>
-//         </div>
-//         <div className="design-div">
-//           <div className="hidden-a">
-//             <ul className="splash-ul">
-//               <li className="splash-li"></li>
-//               <li className="splash-li">DESIGN - NYC</li>
-//               <li className="splash-li"></li>
-//             </ul>
-//             <span className="hidden-span">
-//               <img
-//                 className="hidden-img"
-//                 src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHQxcWNybWRpdG92djZobzdkeTQwNDgzdTl6dG5hbzViMjZvdDcwNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o7btRkeE7RtAq8DnO/giphy.gif"
-//                 alt=""
-//               />
-//             </span>
-//           </div>
-//         </div>
-//       </div>
-//     </>
-//   );
-// }
-
-// export default Splash;
-
 import React, { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import { TimelineMax, Power0, gsap } from "gsap";
 import "./splash.css";
 
@@ -184,7 +118,9 @@ function Splash() {
               <p className="splash-header-p">Product Design</p>
             </div>
             <div className="">
-              <h2 className="splash-header-h2">About</h2>
+              <Link id="comp-link" to="about">
+                <h2 className="splash-header-h2">About</h2>
+              </Link>
             </div>
           </div>
 

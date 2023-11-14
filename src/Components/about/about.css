@@ -1,0 +1,57 @@
+
+
+#about-home {
+    cursor: pointer;
+}
+
+.mid-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-text-div {
+    color: #f9f9f9;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2vw;
+    width: 50%;
+    margin-left: 1rem;
+    margin-bottom: 12vw;
+    text-transform: capitalize;
+}
+
+.marquee-div {
+    position: relative;
+    width: 97vw;
+    height: 4vw;
+    overflow: hidden;
+    display: flex;
+    align-content: flex-end;
+    margin: 0 auto;
+    white-space: nowrap;
+    transform: translate3d(0, 0, 0);
+}
+
+.marquee-text {
+    color: #f9f9f9;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 4vw;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    animation: primary 10s linear infinite;
+}
+
+.marquee-text span {
+    margin: 0 .75rem;
+}
+
+@keyframes primary {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }

@@ -50,3 +50,7 @@
   /* background: rgb(251, 255, 240); */
   background: radial-gradient(circle, rgb(17, 199, 77) 0%, rgb(246, 56, 215) 100%);
 }
+
+#comp-link {
+  text-decoration: none;
+}
