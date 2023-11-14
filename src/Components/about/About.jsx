@@ -10,40 +10,42 @@ function About() {
 
     const initHero = () => {
       gsap.set(about, { x: "-10%" });
-      gsap.set(marquee, {y: "50%"});
+      gsap.set(marquee, { y: "50%" });
     };
 
     const showHero = () => {
-      gsap.timeline({ defaults: { ease: "expo-out" } }).fromTo(
-        about,
-        {
-          opacity: 0,
-          webkitFilter: "blur(6px)",
-        },
-        {
-          duration: 1.25,
-          opacity: 1,
-          x: 0,
-          webkitFilter: "blur(0px)",
-          stagger: 0.015,
-        },
-        0
-      )
-      .fromTo(
-        marquee,
-        {
+      gsap
+        .timeline({ defaults: { ease: "expo-out" } })
+        .fromTo(
+          about,
+          {
+            opacity: 0,
+            webkitFilter: "blur(6px)",
+          },
+          {
+            duration: 1.25,
+            opacity: 1,
+            x: 0,
+            webkitFilter: "blur(0px)",
+            stagger: 0.015,
+          },
+          0
+        )
+        .fromTo(
+          marquee,
+          {
             opacity: 0,
             delay: 1.25,
             webkitFilter: "blur(6px)",
-        },
-        {
+          },
+          {
             duration: 1.25,
             opacity: 1,
             webkitFilter: "blur(0px)",
             y: 0,
             stagger: 0.015,
-        },
-        0
+          },
+          0
         );
     };
     initHero();
@@ -81,8 +83,14 @@ function About() {
             </p>
           </div>
           <div className="marquee-div">
-            <p className="marquee-text">
-              <span>Lorem</span>
+            <div className="marquee-text">
+              <p>
+                Lorem / ipsum / dolor / sit / amet / consectetur / adipisicing / elit /
+              </p>
+              <p>
+                Lorem / ipsum / dolor / sit / amet / consectetur / adipisicing / elit.
+              </p>
+              {/* <span>Lorem</span>
               <span>/</span>
               <span>ipsum</span>
               <span>/</span>
@@ -105,8 +113,8 @@ function About() {
               <span>amet</span>
               <span>/</span>
               <span>consectetur</span>
-              <span>/</span>
-            </p>
+              <span>/</span> */}
+            </div>
           </div>
         </div>
         <div className="footer">
@@ -114,7 +122,7 @@ function About() {
             <p id="footer-link">Work</p>
           </div>
           <div className="footer-divs">
-            {/* <p className="exp" id="footer-link">Exp.</p> */}
+            {/* <p className="exp" id="footer-link">exp</p> */}
             <p className="cordnates exp">linkedin</p>
             <p className="cordnates">joycettes@gmail.com</p>
           </div>
