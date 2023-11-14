@@ -149,7 +149,9 @@ function Splash() {
 
         <div className="footer">
           <div className="footer-divs">
-            <p id="footer-link">Work</p>
+            <Link id="comp-link" to="/work">
+              <p id="footer-link">Work</p>
+            </Link>
 
             {/* <p className="cordnates">
               See past and current

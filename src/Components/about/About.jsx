@@ -54,7 +54,6 @@ function About() {
 
   return (
     <>
-      {/* <div className="about-body-div"> */}
       <div className="splash-div">
         <div className="splash-txt-div">
           <div className="splash-header">
@@ -85,41 +84,21 @@ function About() {
           <div className="marquee-div">
             <div className="marquee-text">
               <p>
-                Lorem / ipsum / dolor / sit / amet / consectetur / adipisicing / elit /
+                Lorem / ipsum / dolor / sit / amet / consectetur / adipisicing /
+                elit /
               </p>
               <p>
-                Lorem / ipsum / dolor / sit / amet / consectetur / adipisicing / elit.
+                Lorem / ipsum / dolor / sit / amet / consectetur / adipisicing /
+                elit.
               </p>
-              {/* <span>Lorem</span>
-              <span>/</span>
-              <span>ipsum</span>
-              <span>/</span>
-              <span>dolor</span>
-              <span>/</span>
-              <span>sit</span>
-              <span>/</span>
-              <span>amet</span>
-              <span>/</span>
-              <span>consectetur</span>
-              <span>/</span>
-              <span>Lorem</span>
-              <span>/</span>
-              <span>ipsum</span>
-              <span>/</span>
-              <span>dolor</span>
-              <span>/</span>
-              <span>sit</span>
-              <span>/</span>
-              <span>amet</span>
-              <span>/</span>
-              <span>consectetur</span>
-              <span>/</span> */}
             </div>
           </div>
         </div>
         <div className="footer">
           <div className="footer-divs">
-            <p id="footer-link">Work</p>
+            <Link id="comp-link" to="/work">
+              <p id="footer-link">Work</p>
+            </Link>
           </div>
           <div className="footer-divs">
             {/* <p className="exp" id="footer-link">exp</p> */}
@@ -128,7 +107,6 @@ function About() {
           </div>
         </div>
       </div>
-      {/* </div> */}
     </>
   );
 }

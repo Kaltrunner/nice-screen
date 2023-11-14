@@ -1,0 +1,32 @@
+
+.scroll-text-div {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.text-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 2.5%;
+    padding: 0;
+    margin: 0;
+}
+
+.scroll-text {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #f9f9f9;
+    background-color: transparent;
+    font-size: 6vw;
+    font-weight:800;
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+    mix-blend-mode: difference;
+    z-index: 999;
+    line-height: 1;
+}
+
+.scroll-text:hover {
+    cursor: pointer;
+}

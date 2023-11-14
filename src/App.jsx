@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AnimatedCursor from "react-animated-cursor";
 import Header from "./Components/splash/Splash";
 import About from "./Components/about/About";
+import Work from "./Components/work/Work";
 import "./App.css";
 
 function App() {
@@ -64,6 +65,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Header />} />
             <Route path="/about" element={<About />} />
+            <Route path="/work" element={<Work />} />
           </Routes>
         </BrowserRouter>
       </div>
