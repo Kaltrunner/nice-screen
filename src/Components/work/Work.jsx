@@ -146,37 +146,6 @@ function Work() {
             <div className="text-div">
               <p className="scroll-text">ipsum</p>
             </div>
-
-            <div className="text-div">
-              <p className="scroll-text">dolor</p>
-            </div>
-            <div className="text-div">
-              <p className="scroll-text">sit</p>
-            </div>
-            <div className="text-div">
-              <p className="scroll-text">amet</p>
-            </div>
-            <div className="text-div">
-              <p className="scroll-text">consectetur</p>
-            </div>
-            <div className="text-div">
-              <p className="scroll-text">adipisicing</p>
-            </div>
-            <div className="text-div">
-              <p className="scroll-text">elit</p>
-            </div>
-            <div className="text-div">
-              <p className="scroll-text">sed</p>
-            </div>
-            <div className="text-div">
-              <p className="scroll-text">eiusmod</p>
-            </div>
-            <div className="text-div">
-              <p className="scroll-text">lorem</p>
-            </div>
-            <div className="text-div">
-              <p className="scroll-text">ipsum</p>
-            </div>
             <div className="text-div">
               <p className="scroll-text">dolor</p>
             </div>
