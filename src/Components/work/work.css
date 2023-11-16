@@ -1,16 +1,17 @@
 
 .scroll-text-div {
     overflow: auto;
-    /* -webkit-overflow-scrolling: touch; */
+    -webkit-overflow-scrolling: touch;
 }
 
 .text-div {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 4%;
+    height: 10%;
     padding: 0;
     margin: 0;
+    
 }
 
 .scroll-text {
@@ -24,7 +25,9 @@
     text-transform: uppercase;
     mix-blend-mode: difference;
     z-index: 999;
-    line-height: 1;
+    /* line-height: 1; */
+    /* will-change: transform; */
+    position: relative;
 }
 
 .scroll-text:hover {

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { gsap } from "gsap";
 import "./work.css";
 
@@ -95,7 +95,7 @@ function Work() {
 
     const showHero = () => {
       gsap.timeline({ defaults: { ease: "expo-out" } }).fromTo(
-        scroll,
+        gsap.utils.toArray(scroll),
         {
           opacity: 0,
           delay: 1.25,
