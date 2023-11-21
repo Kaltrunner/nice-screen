@@ -7,72 +7,75 @@ function Splash() {
   const centerCircleRef = useRef(null);
 
   useEffect(() => {
-    // const splash = document.querySelector(".splash-header");
-    // const splashTitle = splash.querySelectorAll(".h1-div > h1, h2");
-    // const splashP = splash.querySelectorAll(".p-div > p");
+    const splash = document.querySelector(".splash-header");
+    const splashTitle = splash.querySelectorAll(".h1-div > h1, h2");
+    const splashP = splash.querySelectorAll(".p-div > p");
     const splashCircle = centerCircleRef.current;
-    // const footer = document.querySelectorAll(".footer > div");
+    const footer = document.querySelectorAll(".footer > div");
 
     const initHero = () => {
-      // gsap.set(splashTitle, { y: "-201%" });
-      // gsap.set(splashP, { y: "-601%" });
-      gsap.set(splashCircle, { scale: 0, opacity: 0 });
-      // gsap.set(footer, { y: "201%" });
+      gsap.set(splashTitle, { opacity: 0 });
+      gsap.set(splashP, { opacity: 0 });
+      gsap.set(splashCircle, { scale: 0.9, opacity: 0 });
+      gsap.set(footer, { opacity: 0 });
     };
 
     const showHero = () => {
       gsap
         .timeline({ defaults: { ease: "expo-out" } })
-        // .fromTo(
-        //   splashTitle,
-        //   {
-        //     opacity: 0,
-        //   },
-        //   {
-        //     duration: 1.5,
-        //     opacity: 1,
-        //     y: 0,
-        //     stagger: 0.015,
-        //   },
-        //   0
-        // )
-        // .fromTo(
-        //   splashP,
-        //   {
-        //     opacity: 0,
-        //   },
-        //   {
-        //     duration: 1.5,
-        //     opacity: 1,
-        //     y: 0,
-        //     stagger: 0.015,
-        //   },
-        //   0
-        // )
+        .fromTo(
+          splashTitle,
+          {
+            opacity: 0,
+            webkitFilter: "blur(4px)",
+          },
+          {
+            webkitFilter: "blur(0px)",
+            delay: 0.25,
+            duration: 0.5,
+            opacity: 1,
+          },
+          0
+        )
+        .fromTo(
+          splashP,
+          {
+            opacity: 0,
+            webkitFilter: "blur(4px)",
+          },
+          {
+            webkitFilter: "blur(0px)",
+            delay: 0.25,
+            duration: 0.5,
+            opacity: 1,
+          },
+          0
+        )
         .to(
           splashCircle,
           {
-            delay: 0.5,
-            duration: 3,
+            delay: 1,
+            duration: 1.5,
             scale: 1,
             opacity: 1,
             ease: "expo-in-out",
           },
           0
+        )
+        .fromTo(
+          footer,
+          {
+            opacity: 0,
+            webkitFilter: "blur(4px)",
+          },
+          {
+            webkitFilter: "blur(0px)",
+            delay: 0.25,
+            duration: 0.5,
+            opacity: 1,
+          },
+          0
         );
-      // .fromTo(
-      //   footer,
-      //   {
-      //     opacity: 0,
-      //   },
-      //   {
-      //     duration: 1.5,
-      //     opacity: 1,
-      //     y: 0,
-      //     stagger: 0.015,
-      //   },
-      //   0
-      // );
     };
     initHero();
     showHero();
@@ -137,7 +140,7 @@ function Splash() {
             </Link>
           </div>
           <div className="footer-divs">
-            {/* <p className="exp" id="footer-link">Exp.</p> */}
+            {/* <p className="exp" id="footer-link">Exp</p> */}
             <p className="cordnates exp">linkedin</p>
             <p className="cordnates">joycettes@gmail.com</p>
           </div>
