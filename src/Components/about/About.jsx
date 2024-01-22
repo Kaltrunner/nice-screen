@@ -102,8 +102,20 @@ function About() {
           </div>
           <div className="footer-divs">
             {/* <p className="exp" id="footer-link">exp</p> */}
-            <p className="cordnates exp">linkedin</p>
-            <p className="cordnates">joycettes@gmail.com</p>
+            <a
+              href="https://www.linkedin.com/in/joyce-r/"
+              target="_blank"
+              rel="noreferrer"
+              id="linkedin-link"
+            >
+              <p className="cordnates exp">linkedin</p>
+            </a>
+            <a
+              href="mailto:joycettes@gmail.com?subject=Hello!"
+              id="linkedin-link"
+            >
+              <p className="cordnates">joycettes@gmail.com</p>
+            </a>
           </div>
         </div>
       </div>
