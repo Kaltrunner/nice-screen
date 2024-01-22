@@ -34,12 +34,12 @@ function App() {
       <AnimatedCursor
         id="mouse"
         innerSize={0}
-        outerSize={250}
+        outerSize={150}
         color="245, 216, 245"
         outerAlpha={1}
         innerScale={0.5}
         outerScale={0.8}
-        trailingSpeed={2}
+        trailingSpeed={8}
         hasBlendMode={true}
         filter={true}
         outerStyle={{

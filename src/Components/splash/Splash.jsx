@@ -54,7 +54,7 @@ function Splash() {
         .to(
           splashCircle,
           {
-            delay: 1,
+            delay: 0.5,
             duration: 1.5,
             scale: 1,
             opacity: 1,
@@ -141,8 +141,20 @@ function Splash() {
           </div>
           <div className="footer-divs">
             {/* <p className="exp" id="footer-link">Exp</p> */}
-            <p className="cordnates exp">linkedin</p>
-            <p className="cordnates">joycettes@gmail.com</p>
+            <a
+              href="https://www.linkedin.com/in/joyce-r/"
+              target="_blank"
+              rel="noreferrer"
+              id="linkedin-link"
+            >
+              <p className="cordnates exp">linkedin</p>
+            </a>
+            <a
+              href="mailto:joycettes@gmail.com?subject=Hello!"
+              id="linkedin-link"
+            >
+              <p className="cordnates">joycettes@gmail.com</p>
+            </a>
           </div>
         </div>
       </div>
